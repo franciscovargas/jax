@@ -160,9 +160,9 @@ def fori_loop(lower, upper, body_fun, init_val):
     lower_ = int(lower)
     upper_ = int(upper)
   except TypeError:
-    use_scan = False
+    use_scan = True
   else:
-    use_scan = False  # TODO(mattjj): re-enable this
+    use_scan = True  # TODO(mattjj): re-enable this
 
   if use_scan:
     (_, _, result), _ = scan(_fori_scan_body_fun(body_fun),
